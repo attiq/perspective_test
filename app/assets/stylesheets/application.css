@@ -1,0 +1,150 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+body {
+    font-family: 'Open Sans', sans-serif;
+
+}
+
+.container--checkbox {
+    display: inline-block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    vertical-align: top;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    margin: 3px 5px;
+    vertical-align: top;
+}
+
+/* Hide the browser's default radio button */
+.container--checkbox input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: transparent;
+    border-radius: 50%;
+    border: 2px solid #ccc;
+}
+
+/* On mouse-over, add a grey background color */
+.container--checkbox:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.container--checkbox input:checked ~ .checkmark {
+    background-color: #2196F3;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.container--checkbox input:checked ~ .checkmark:after {
+    display: none;
+}
+
+/* Style the indicator (dot/circle) */
+.container--checkbox .checkmark:after {
+    top: 9px;
+    left: 9px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: white;
+}
+
+.box--list {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    border: 1px solid #f4f4f4;
+    padding: 20px;
+}
+
+.box--list p {
+    font-size: 16px;
+}
+
+.red-text {
+    color: #fb7e7e;
+    margin-right: 11px;
+    vertical-align: top;
+    font-size: 14px;
+}
+
+.green-text {
+    color: #20ac89;
+    font-size: 14px;
+    vertical-align: top;
+}
+
+.gray--bar {
+    background: #e9ecef;
+    height: 10px;
+}
+
+.purple--bar {
+    background: #a926cb;
+    height: 10px;
+}
+
+.progress--section .box--list p {
+    margin-bottom: 9.2px;
+}
+
+.progress--section .box--list {
+    max-width: 100%;
+    padding: 40px 20px;
+    text-align: left;
+}
+
+.progress--section .box--list h3,
+.checkbox--section h3 {
+    color: #103263;
+    font-size: 22px;
+    margin-bottom: 0;
+    margin-top: 20px;
+}
+
+.checkbox--section p {
+    font-size: 15px;
+}
+
+.box--list .form-control {
+    font-size: 13px;
+    margin-bottom: 20px;
+    height: 42px;
+    border: 1px solid #999;
+}

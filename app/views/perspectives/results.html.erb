@@ -1,0 +1,93 @@
+<section class="progress--section mt-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="box--list">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="content--left pt-4">
+                <h3>Your Prespective</h3>
+                <p>
+                  <small>Your Prespective Type is <%= @user.mbti %></small>
+                </p>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="row">
+                <div class="col-md-3 ">
+                  <p>
+                    <small>Extraversion(E)</small>
+                  </p>
+                  <p>
+                    <small>Sensin(S)</small>
+                  </p>
+                  <p>
+                    <small>Thinking(T)</small>
+                  </p>
+                  <p>
+                    <small>Judging(J)</small>
+                  </p>
+                </div>
+
+                <div class="col-md-4 mt-2">
+                  <div class="row mb-4">
+                    <div class="col-md-6 p-0">
+                      <div class=<%= @user.mbti.include?("E") ? 'purple--bar' : 'gray--bar' %>></div>
+                    </div>
+                    <div class="col-md-6 p-0">
+                      <div class=<%= @user.mbti.include?("I") ? 'purple--bar' : 'gray--bar' %>></div>
+                    </div>
+                  </div>
+
+                  <div class="row mb-4">
+                    <div class="col-md-6 p-0">
+                      <div class=<%= @user.mbti.include?("S") ? 'purple--bar' : 'gray--bar' %>></div>
+                    </div>
+                    <div class="col-md-6 p-0">
+                      <div class=<%= @user.mbti.include?("N") ? 'purple--bar' : 'gray--bar' %>></div>
+                    </div>
+
+                  </div>
+
+                  <div class="row mb-4">
+                    <div class="col-md-6 p-0">
+                      <div class=<%= @user.mbti.include?("T") ? 'purple--bar' : 'gray--bar' %>></div>
+                    </div>
+                    <div class="col-md-6 p-0">
+                      <div class=<%= @user.mbti.include?("F") ? 'purple--bar' : 'gray--bar' %>></div>
+                    </div>
+                  </div>
+
+                  <div class="row mb-4">
+                    <div class="col-md-6 p-0">
+                      <div class=<%= @user.mbti.include?("J") ? 'purple--bar' : 'gray--bar' %>></div>
+                    </div>
+                    <div class="col-md-6 p-0">
+                      <div class=<%= @user.mbti.include?("P") ? 'purple--bar' : 'gray--bar' %>></div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-5 text-left">
+                  <p>
+                    <small>Introversion(I)</small>
+                  </p>
+                  <p>
+                    <small>Intujion(N)</small>
+                  </p>
+                  <p>
+                    <small>Feeling(F)</small>
+                  </p>
+                  <p>
+                    <small>Preceving(P)</small>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,60 @@
+<section class="checkbox--section">
+  <div class="container">
+    <div class="row mt-5 mb-3">
+      <div class="col-md-12">
+        <h3>Discover Your Perspective</h3>
+        <p>Complete the 7 min test and get a detailed report of your lenses on the world</p>
+      </div>
+    </div>
+    <%= form_tag "results", id: "perspective_form" do %>
+        <div class="row justify-content-center mb-5">
+
+          <div class="col-md-12">
+            <% @questions.each do |question| %>
+                <div class="box--list">
+                  <div class="row justify-content-center">
+                    <div class="col-md-12">
+                      <p><%= question.description %></p>
+                    </div>
+
+                    <div class="col-md-8">
+                      <span class="red-text">Disagree</span>
+                      <% (1..7).each do |i| %>
+                          <label class="container--checkbox">
+                            <%= radio_button_tag "answer_#{question.id}", i %>
+                            <span class="checkmark"></span>
+                          </label>
+                      <% end %>
+                      <span class="green-text">Agree</span>
+                      <div id="error_answer_<%= question.id %>" class="red-text"></div>
+                    </div>
+
+                  </div>
+                </div>
+            <% end %>
+
+            <div class="box--list">
+              <div class="row justify-content-center">
+                <div class="col-md-12">
+                  <p>Your Email</p>
+                </div>
+
+                <div class="col-md-8">
+                  <%= text_field_tag :email, "", class: "form-control", placeholder: "you@example.com" %>
+                  <div id="email_error" class="red-text"></div>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="row text-center mt-4">
+              <div class="col-md-12">
+                <button id="submit" class="btn btn-primary" type="submit">Save & Continue</button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+    <% end %>
+  </div>
+</section>
